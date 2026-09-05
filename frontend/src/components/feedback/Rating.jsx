@@ -1,0 +1,1 @@
+export default function Rating({ value=0, onChange, readOnly=false }) { return <div className="rating">{[1,2,3,4,5].map(n=><button type="button" key={n} className={n<=value?"filled":""} disabled={readOnly} onClick={()=>onChange?.(n)}>★</button>)}</div>; }
